@@ -1,9 +1,48 @@
 <!DOCTYPE html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCT360 | Responsive Grid Layout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
+    <div class="page-wrapper">
+        <header class="header">
+            <h1>My Web Design Page</h1>
+            <p>CCT360 Responsive Grid Layout</p>
+        </header>
 
+        <nav class="nav" aria-label="Main navigation">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#card1">Home</a></li>
+                <li><a href="#card2">About</a></li>
+                <li><a href="#card3">Projects</a></li>
+            </ul>
+        </nav>
 
-<h1> welcome </h1>
-<h2> this is my page</h2>
+        <main class="main">
+            <h2>Main Content Area</h2>
+            <section class="card-container" aria-label="Content cards">
+                <article class="card card1" id="card1">
+                    <h3>Content Card 1</h3>
+                    <p>This card spans the full width of the main content area.</p>
+                </article>
+                <article class="card card2" id="card2">
+                    <h3>Content Card 2</h3>
+                    <p>This card sits beside Card 3 on desktop screens.</p>
+                </article>
+                <article class="card card3" id="card3">
+                    <h3>Content Card 3</h3>
+                    <p>This card sits beside Card 2 on desktop screens.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 My Web Design Page | CCT360</p>
+        </footer>
+    </div>
 </body>
 </html>

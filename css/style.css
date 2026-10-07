@@ -1,1 +1,114 @@
+/* Universal CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f1f5f9;
+    color: red;
+}
+
+/* Named grid areas and mobile-first page layout */
+.page-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    gap: 16px;
+    padding: 16px;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: lightpink;
+    color: darkred;
+    padding: 24px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: lightpink;
+    padding: 24px;
+}
+
+.nav ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.nav li {
+    margin-bottom: 10px;
+}
+
+.nav a {
+    color: red;
+    text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+    text-decoration: underline;
+}
+
+.main {
+    grid-area: main;
+    min-width: 0;
+    background-color: rgb(252, 214, 220);
+    padding: 24px;
+}
+
+.main > h2 {
+    margin-bottom: 16px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+.card {
+    min-width: 0;
+    padding: 24px;
+    background-color: lightpink;
+    border: 1px solid red;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: mediumvioletred;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .page-wrapper {
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card1 {
+        grid-column: 1 / -1;
+    }
+}
